@@ -20,7 +20,7 @@ coloc.bayes <- function(df1,snps=setdiff(colnames(df1),response),response="Y",pr
     n.orig <- length(snps)
     if(n.orig<2)
         return(1)
-    prep <- coloc:::prepare.df(df1, snps, r2.trim=r2.trim, dataset=1, quiet=quiet)
+    prep <- coloc:::prepare.df(df1, r2.trim=r2.trim, dataset=1, quiet=quiet)
     df1 <- prep$df
     snps <- prep$snps
     
